@@ -1,0 +1,40 @@
+@mixin circle($width, $height) {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+}
+
+@mixin phone {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-size($size) {
+    @if $size == phone {
+        @media (max-width: 599px) {
+            @content;
+        }
+    } @else if $size == tablet {
+        @media (min-width: 900px) {
+            @content;
+        }
+    } @else if $size == desktop {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}

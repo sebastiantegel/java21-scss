@@ -1,0 +1,30 @@
+@use './variables';
+@use './mixins';
+
+div {
+    background-color: variables.$primary-color;
+    padding: 2 * variables.$my-padding;
+    @include mixins.circle(200px, 200px);
+
+    @include mixins.for-size(phone) {
+        background-color: greenyellow;
+    }
+    @include mixins.for-size(tablet) {
+        background-color: red;
+    }
+    @include mixins.for-size(desktop) {
+        background-color: cornflowerblue;
+    }
+
+    p {
+        background-color: variables.$secondary-color;
+        padding: variables.$my-padding;
+        @include mixins.circle(150px, 150px);
+
+        span {
+            background-color:chocolate;
+            color: white;
+            @include mixins.circle(50px, 50px);
+        }
+    }
+}
