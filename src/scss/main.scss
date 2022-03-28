@@ -13,7 +13,7 @@ div {
         background-color: red;
     }
     @include mixins.for-size(desktop) {
-        background-color: cornflowerblue;
+        background-color:aliceblue;
     }
 
     p {
