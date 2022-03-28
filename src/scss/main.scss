@@ -24,7 +24,7 @@ div {
         span {
             background-color:chocolate;
             color: white;
-            @include mixins.circle(50px, 50px);
+            @include mixins.circle(75px, 75px);
         }
     }
 }
